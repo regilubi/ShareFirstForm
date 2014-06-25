@@ -1,9 +1,34 @@
 <?xml version="1.0"?>
 
-<project name="Share Customization Build Script" basedir="." >
+<project name="Share Customization Build Script"  default="dist-jar" basedir=".">
 	<!-- Property default values. May be overridden using above files or via command-line args -->
 	<property name="jar.name" value="share-first-form.jar" />
 	<property name="zip.name" value="share-first-form.zip" />
 	<property name="amp.name" value="share-first-form.amp" />
 	<property name="alfresco.extension.jar" value="alfrescoform-extension.jar"/>
+
+
+	<target name="init" description="Initialisation">
+	    <tstamp/>
+	    <buildnumber file="numerobuild.txt" />
+	    <echo message="Generation numero : ${build.number} du ${TODAY}"/>
+	  </target>
+	
+	<target name="AfficherVersionAnt">
+	     <echo message="Version d'Ant utilisée: ${ant.version}"/>
+	</target>
+    
+	<target name="message" >
+	     <echo>Installing SDK Sharefirstform1</echo>        
+	</target>
+	
+    <target name="dist-jar" depends="init, AfficherVersionAnt, message" description="Package the Module" >
+    	<echo> The quick brown fox jumps over the lazy dog!</echo>
+      
+    </target>
+
+    
+	
+	
+
 </project>
