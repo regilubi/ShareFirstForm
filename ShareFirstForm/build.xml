@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<project name="Share Customization Build Script" basedir="." >
+	<!-- Property default values. May be overridden using above files or via command-line args -->
+	<property name="jar.name" value="share-first-form.jar" />
+	<property name="zip.name" value="share-first-form.zip" />
+	<property name="amp.name" value="share-first-form.amp" />
+	<property name="alfresco.extension.jar" value="alfrescoform-extension.jar"/>
+</project>
